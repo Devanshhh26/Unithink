@@ -1,23 +1,19 @@
 import React from 'react'
-import { Card } from 'flowbite-react';
 import usa from '../assets/usa.jpg'
 import uk from '../assets/uk.jpg'
-import paris from '../assets/paris.jpg'
-import topbg from '../assets/homebg.svg'
+import homebg from '../assets/homebg.png'
 import { Button } from 'flowbite-react';
-import pariscopy from '../assets/pariscopy.jpg'
 import pp from '../assets/pp.jpeg'
-import ReactPlayer from 'react-player/youtube'
 import videoShape from '../assets/video-shape-1.png'
 import videoShape2 from '../assets/video-shape-2.png'
 import { HiArrowCircleRight } from "react-icons/hi";
-import { BsZoomIn } from 'react-icons/bs';
+
 import { Link } from 'react-router-dom'
 
 function PopularCountriesImages() {
   return (
     <div>
-        <div  style={{ backgroundImage: `url(${topbg})` }} className='bg-cover bg-center bg-no-repeat'>
+        <div  style={{ backgroundImage: `url(${homebg})` }} className='bg-cover bg-center bg-no-repeat'>
             <div>
                 <div className="flex items-center mt-5">
                     <div className="text-center mx-auto pt-5">

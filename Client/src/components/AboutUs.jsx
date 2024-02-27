@@ -2,8 +2,6 @@ import React from 'react'
 import aboutus from '../assets/aboutus.png'
 import aboutusperson from '../assets/aboutusperson.jpg'
 import { BsCheck2All } from "react-icons/bs";
-import about20k from '../assets/about20k.svg'
-import { Card } from 'flowbite-react';
 import aboutshape from '../assets/about-shape-2.svg'
 
 

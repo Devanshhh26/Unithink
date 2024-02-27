@@ -1,10 +1,9 @@
 import React from 'react'
 import { Button, Card } from 'flowbite-react';
-import topbg from '../assets/homebg.svg'
 import course1 from '../assets/course-1.jpg'
 import course2 from '../assets/course-2.jpg'
 import course3 from '../assets/course-3.jpg'
-import rotated from '../assets/rotated.svg'
+import rotated from '../assets/rotated.png'
 import { HiArrowCircleRight } from "react-icons/hi";
 
 function Articles() {

@@ -1,5 +1,5 @@
 import React from 'react'
-import homebg from '../assets/homebg.svg'
+import homebg from '../assets/homebg.png'
 import { Label,TextInput } from 'flowbite-react'
 import { Button } from 'flowbite-react'
 function BookNow() {
