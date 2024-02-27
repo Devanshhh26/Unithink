@@ -1,5 +1,5 @@
 import React from 'react'
-import topbg from '../assets/homebg.svg'
+import homebg from '../assets/homebg.svg'
 import { Label,TextInput } from 'flowbite-react'
 import { Button } from 'flowbite-react'
 function BookNow() {
@@ -14,7 +14,7 @@ function BookNow() {
   return (
     <div>
         <div className='min-h-screen mt-10'>
-            <div style={{ backgroundImage: `url(${topbg})` }} className="h-screen bg-cover bg-center bg-no-repeat pt-20">
+            <div style={{ backgroundImage: `url(${homebg})` }} className="h-screen bg-cover bg-center bg-no-repeat pt-20">
                 <div className='flex p-3 max-w-5xl mx-auto flex-col md:flex-row md:items-center gap-5'>
                     <div className='flex-1 mr-6'>
                         <div className=' font-bold text-5xl tracking-wide'>
