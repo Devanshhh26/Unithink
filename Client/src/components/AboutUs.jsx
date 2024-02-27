@@ -20,7 +20,7 @@ function AboutUs() {
                             <h5 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white pb-4 ">
                                 Over 15 Years in <span className='text-red-500'> Placing Students </span> all over the world
                             </h5>
-                            <p className="font-normal text-gray-500 dark:text-gray-400 pb-4 ">
+                            <p className="font-normal text-gray-500 dark:text-gray-400 pb-4">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum velit, quis, blanditiis dignissimos temporibus tempore, quidem officia quo amet odit nostrum. Beatae nihil sunt consequuntur et odit repellat porro quidem!
                             </p>
                             <div className=''>

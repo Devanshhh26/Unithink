@@ -9,7 +9,7 @@ function Categories() {
   return (
     <div>
         <div>
-            <div className="flex items-center mt-5">
+            <div className="flex  items-center mt-5">
                 <div className="text-center mx-auto pt-5">
                     <p className="mb-4 mt-10 pt-5 text-red-500 font-medium ">CATEGORIES</p>
                     <h1 className="mb-4 text-5xl font-semibold"> <span className='text-sky-400'>Boundless</span> Learning at your tips.</h1>
