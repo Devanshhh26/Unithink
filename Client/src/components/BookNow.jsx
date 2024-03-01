@@ -13,7 +13,7 @@ function BookNow() {
 
   return (
 <div>
-  <div style={{ backgroundImage: `url(${homebg})` }} className="h-screen bg-cover bg-center bg-no-repeat pt-2 pb-10 flex justify-center items-center mt-10 md:mt-0"> {/* Add mt-20 for smaller devices to adjust for the fixed header */}
+  <div style={{ backgroundImage: `url(${homebg})` }} className="h-screen bg-cover bg-center bg-no-repeat pt-2 pb-10 flex justify-center items-center mt-10 md:mt-0">
     <div className="max-w-5xl mx-auto flex flex-col md:flex-row md:items-center gap-5">
       <div className="flex-1">
         <div className='font-bold text-3xl md:text-5xl tracking-wide text-center md:text-left'>
