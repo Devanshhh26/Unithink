@@ -25,7 +25,7 @@ function Countries() {
         {countries && countries.map((country) =>(
           <div key={country._id} className="p-2 pb-10 ">
             <Link to={`/countries/${country.c_id}`}>
-              <Card className="max-w-sm scale-110 hover:scale-105 shadow-lg" imgSrc="https://pics.craiyon.com/2023-11-01/b6267e26f11842ac8fa017e010f6e994.webp" horizontal>
+              <Card className="max-w-sm scale-110 hover:scale-105 shadow-lg" imgSrc={country.img_link || "https://pics.craiyon.com/2023-11-01/b6267e26f11842ac8fa017e010f6e994.webp"} horizontal>
                 <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   {country.c_name}
                 </h5>

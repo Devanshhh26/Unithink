@@ -9,10 +9,13 @@ function About() {
   <img src={boardmeet} alt="" className="max-w-full mb-8 pb-10 md:max-h-96 md:mb-0" />
   <div className="mx-4 md:mx-20 text-gray-600 text-lg">
     <p className=''>
-     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem laudantium harum molestias repellendus. Vero, minus! Maxime enim architecto nobis id magnam ducimus. Voluptatibus pariatur, maiores labore aperiam nihil ut fuga.
+    UEI aims at guiding you for the global career growth by pursuing the right education at the country of your choice and which will suit you as per your culture and personality.
     </p>
     <p className='pt-5 text-lg'>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum neque fugiat, eius, facere modi cupiditate labore tenetur ex, similique cumque saepe porro quae? Nemo eius, veniam quis natus ad mod.
+    UEI also aims at developing the executives at all the levels for reaching their highest potential of performance and productivity driving the teams along achieving the organizational objectives.
+    </p>
+    <p>
+    UEI is dedicated to the education and business for helping them set their processes, developing their human resources, manage the entire supply chain end to end. It’s a network connecting top leaders of education and industry and establish the dialogue for capturing the opportunities which are amicable for both.
     </p>
     <h1 className="text-center mt-8 font-bold text-2xl underline text-black">MISSION</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nisi mollitia quia atque quisquam beatae obcaecati quibusdam explicabo quis, quod, repellat nemo culpa cumque consequatur. Atque earu</p>
