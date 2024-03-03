@@ -5,12 +5,13 @@ import course2 from '../assets/course-2.jpg'
 import course3 from '../assets/course-3.jpg'
 import rotated from '../assets/rotated.png'
 import { HiArrowCircleRight } from "react-icons/hi";
+import { Link } from 'react-router-dom';
 
 function Articles() {
   return (
     <div>
         <div>
-            <div  style={{ backgroundImage: `url(${rotated})` }} className=' p-2 pb-28 bg-cover bg-center bg-no-repeat'>
+            <div  style={{ backgroundImage: `url(${rotated})` }} className=' p-2 pb-5 bg-cover bg-center bg-no-repeat'>
                 <div className="flex items-center mt-5">
                     <div className="text-center mx-auto pt-5">
                         <p className="mb-4 mt-10 pt-5 text-gray-500 font-medium ">LATEST ARTICLES</p>
@@ -48,8 +49,9 @@ function Articles() {
                         </Card>
                     </div>
                 </div>
-
-
+                <Link to='/faqs'>
+                    <Button outline size='lg' gradientDuoTone="pinkToOrange" pill className='mx-auto justify-items-center mt-12 hover:scale-105' style={{ zIndex: 1, marginBottom: '60px' }}>Browse more FAQs <HiArrowCircleRight size={25} /></Button>
+                </Link>
             </div>
             
         </div>

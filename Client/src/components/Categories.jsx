@@ -26,7 +26,7 @@ function Categories() {
                             Study Abroad
                         </h5>
                         <p className="font-normal text-gray-700 dark:text-gray-400">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid, provident! Suscipit quia iste ut hic nostrum excepturi ex enim repellat iusto, incidunt vitae quae officiis quam cupiditate. Quae, consectetur repellendus!
+                        Explore global learning opportunities for transformative education experiences.
                         </p>
                     </Card>
                 </div>
@@ -37,7 +37,7 @@ function Categories() {
                             Community
                         </h5>
                         <p className="font-normal text-gray-700 dark:text-gray-400">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, corporis provident error consectetur vel dolor, exercitationem dignissimos quam, libero aliquid quas enim iste aliquam facilis dolorem qui aut! Quae, accusantium?
+                        Empowering connections and fostering collaboration for positive societal impact.
                         </p>
                     </Card>
                 </div>
@@ -48,7 +48,7 @@ function Categories() {
                             Skill Development
                         </h5>
                         <p className="font-normal text-gray-700 dark:text-gray-400">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt laboriosam quaerat voluptate qui provident aspernatur excepturi consequuntur nobis impedit blanditiis, nemo sequi eum molestiae doloremque, accusantium odit. Qui
+                        Unlocking potential through tailored learning solutions for personal and professional growth.
                         </p>
                     </Card>
                 </div>
@@ -59,7 +59,7 @@ function Categories() {
                             Consulting
                         </h5>
                         <p className="font-normal text-gray-700 dark:text-gray-400">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis aspernatur consequatur nihil praesentium quidem quis voluptate sit itaque veritatis, rerum quos impedit? Aperiam blanditiis aut ea beatae? Possimus, debitis repellat!
+                        Strategically navigating educational and business landscapes for sustainable success.
                         </p>
                     </Card>
                 </div>
