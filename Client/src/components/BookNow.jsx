@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import homebg from '../assets/homebg.png';
+import huge from '../assets/huge.png';
 import { Label, TextInput, Button, Alert,Select } from 'flowbite-react';
 import { HiMail } from 'react-icons/hi';
 import { ToastContainer, toast } from 'react-toastify';
@@ -16,7 +16,7 @@ function BookNow() {
         email: '',
         country: '',
         phonenumber: '',
-        degree: ''
+        degree: 'Masters'
     });
     const [successMessage, setSuccessMessage] = useState(null);
 
@@ -54,8 +54,8 @@ function BookNow() {
 
     return (
         <div>
-            <div style={{ backgroundImage: `url(${homebg})` }} className="h-screen bg-cover bg-center bg-no-repeat pt-32 pb-10 flex justify-center items-center mt-10 md:mt-0">
-                <div className="max-w-5xl mx-auto flex flex-col md:flex-row md:items-center gap-5">
+            <div style={{ backgroundImage: `url(${huge})` }} className="h-screen bg-cover bg-center bg-no-repeat pt-32 pb-10 flex justify-center items-center mt-10 md:mt-0">
+                <div className="max-w-5xl mx-auto flex flex-col md:flex-row md:items-center gap-24">
                     <div className="flex-1">
                         <div className='font-bold text-3xl md:text-5xl tracking-wide text-center md:text-left'>
                             A Stop for all your needs.
@@ -71,7 +71,7 @@ function BookNow() {
                         <p className='text-lg text-center md:text-left'>Book a session now! Dw! We won't charge you for anything...</p>
                         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
                             <div>
-                                <Label value='Name' />
+                                <Label value='Name*' />
                                 <TextInput
                                     type='text'
                                     placeholder='Enter your name'
@@ -80,7 +80,7 @@ function BookNow() {
                                     onChange={handleChange} />
                             </div>
                             <div>
-                                <Label value='Email' />
+                                <Label value='Email*' />
                                 <TextInput
                                     type='email'
                                     placeholder='Enter your email'
@@ -89,7 +89,7 @@ function BookNow() {
                                     onChange={handleChange} rightIcon={HiMail} />
                             </div>
                             <div>
-                                <Label value='Phone' />
+                                <Label value='Phone*' />
                                 <TextInput
                                     type='number'
                                     placeholder='Enter your number'
@@ -98,7 +98,7 @@ function BookNow() {
                                     onChange={handleChange} />
                             </div>
                             <div>
-                                <Label htmlFor="degree" value="Select your degree" />
+                                <Label htmlFor="degree" value="Select your degree*" />
                                 <Select id="degree" value={formData.degree} onChange={handleChange} required>
                                     <option value="Masters">Masters</option>
                                     <option value="Bachelors">Bachelors</option>
@@ -106,7 +106,7 @@ function BookNow() {
                                 </Select>
                             </div>
                             <div>
-                                <Label value='Country' />
+                                <Label value='Country*' />
                                 <TextInput
                                     type='text'
                                     placeholder='Enter your preferred country'
@@ -115,7 +115,6 @@ function BookNow() {
                                     onChange={handleChange} />
                             </div>
                             <Button gradientDuoTone='pinkToOrange' type='submit' disabled={loading}>{loading ? 'Booking...' : 'Book Now!'}</Button>
-                            
                         </form>
                     </div>
                 </div>
