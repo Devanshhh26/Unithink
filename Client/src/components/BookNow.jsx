@@ -3,6 +3,9 @@ import axios from 'axios';
 import homebg from '../assets/homebg.png';
 import { Label, TextInput, Button, Alert,Select } from 'flowbite-react';
 import { HiMail } from 'react-icons/hi';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 
 function BookNow() {
@@ -24,10 +27,11 @@ function BookNow() {
         }
         try {
             setLoading(true);
-            const response = await axios.post('https://your-api-endpoint.com/your-route', formData);
+            const response = await axios.post('https://unithink-corp.onrender.com/api/SessShort/', formData);
             console.log('Data sent successfully:', response.data);
             setLoading(false);
             setSuccessMessage('Form submitted successfully!');
+            toast.success('Form submitted successfully!');
             setFormData({
                 name: '',
                 email: '',
@@ -40,6 +44,7 @@ function BookNow() {
             console.error('Error sending data:', error);
             setLoading(false);
             setErrorMessage('Failed to submit form. Please try again later.');
+            toast.error('You have already Registered once');
         }
     };
 
@@ -110,8 +115,7 @@ function BookNow() {
                                     onChange={handleChange} />
                             </div>
                             <Button gradientDuoTone='pinkToOrange' type='submit' disabled={loading}>{loading ? 'Booking...' : 'Book Now!'}</Button>
-                            {errorMessage && <Alert color='failure' className="text-red-500">{errorMessage}</Alert>}
-                            {successMessage && <Alert color="success">{successMessage}</Alert>}
+                            
                         </form>
                     </div>
                 </div>
