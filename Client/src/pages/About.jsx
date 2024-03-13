@@ -1,39 +1,186 @@
 import React from 'react'
-import boardmeeting from '../assets/boardmeeting.jpg'
 import aboutusperson from '../assets/aboutusperson.jpg'
-import boardmeet from '../assets/boardmeet.jpg'
+import boardmeet from '../assets/about3.png'
+import { Label, TextInput, Button, Alert,Select } from 'flowbite-react';
+import { useState,useEffect } from 'react';
+import axios from 'axios';
+import { HiMail } from 'react-icons/hi';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function About() {
+
+  const [errorMessage, setErrorMessage] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [formData, setFormData] = useState({
+      name: '',
+      email: '',
+      country: '',
+      phonenumber: '',
+      degree: 'Masters'
+  });
+  const [successMessage, setSuccessMessage] = useState(null);
+
+  const handleSubmit = async (e) => {
+      e.preventDefault();
+      if (!formData.name || !formData.email || !formData.country || !formData.phonenumber || !formData.degree) {
+          return setErrorMessage('Please fill all the details');
+      }
+      try {
+          setLoading(true);
+          const response = await axios.post('https://unithink-corp.onrender.com/api/SessShort/', formData);
+          console.log('Data sent successfully:', response.data);
+          setLoading(false);
+          setSuccessMessage('Form submitted successfully!');
+          toast.success('Form submitted successfully!');
+          setFormData({
+              name: '',
+              email: '',
+              country: '',
+              phonenumber: '',
+              degree: ''
+          });
+          setErrorMessage(null);
+      } catch (error) {
+          console.error('Error sending data:', error);
+          setLoading(false);
+          setErrorMessage('Failed to submit form. Please try again later.');
+          toast.error('You have already Registered once');
+      }
+  };
+
+  const handleChange = (e) => {
+      setFormData({ ...formData, [e.target.id]: e.target.value });
+  };
+
+
   return (
-  <div className="flex flex-col items-center justify-center">
-  <img src={boardmeet} alt="" className="max-w-full mb-8 pb-10 md:max-h-96 md:mb-0" />
-  <div className="mx-4 md:mx-20 text-gray-600 text-lg">
-    <p className=''>
-    UEI aims at guiding you for the global career growth by pursuing the right education at the country of your choice and which will suit you as per your culture and personality.
-    </p>
-    <p className='pt-5 text-lg'>
-    UEI also aims at developing the executives at all the levels for reaching their highest potential of performance and productivity driving the teams along achieving the organizational objectives.
-    </p>
-    <p>
-    UEI is dedicated to the education and business for helping them set their processes, developing their human resources, manage the entire supply chain end to end. It’s a network connecting top leaders of education and industry and establish the dialogue for capturing the opportunities which are amicable for both.
-    </p>
-    <h1 className="text-center mt-8 font-bold text-2xl underline text-black">MISSION</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nisi mollitia quia atque quisquam beatae obcaecati quibusdam explicabo quis, quod, repellat nemo culpa cumque consequatur. Atque earu</p>
-    <h1 className="text-center mt-8 font-bold text-2xl underline text-black">VISION</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi voluptates explicabo omnis provident, accusamus ipsa, magni architecto doloremque ab perferendis consequuntur illum sit et obcaecati</p>
-    <h1 className="text-center mt-8 font-bold text-2xl underline pb-5 text-black">MEET THE FOUNDER</h1>
-    <div className="flex flex-col md:flex-row items-center justify-center">
-      <img src={aboutusperson} alt="" className="max-h-96 mx-auto rounded-xl md:mr-10 mb-8 md:mb-0" />
-      <div className="md:w-1/2">
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde faccia Unde faccia cUnde faccia c consequatur vero quidem?</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae recusandae ipsa, incidunt aliquid quod ipsam, ut, hic inventore </p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque explicabo placeat perspiciatis quod. Itaque minus assumenda</p>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus architecto ipsam doloremque illo consequuntur ad, et ea aper=</p>
-      </div>
+    <div>
+      {/* top section */}
+      <div className="relative max-w-full">
+  <div style={{ backgroundImage: `url(${boardmeet})`, filter: 'blur(8px)' }} className="p-20 md:p-80 md:pr-52 bg-cover bg-center bg-no-repeat flex justify-center items-center pb-16 lg:mt-0 md:mt-20 mt-28 relative">
+    <div className="absolute inset-0"></div>
+  </div>
+  <div className="absolute inset-0 flex flex-col justify-center items-center">
+    <div className=" border-b border-black">
+      <h1 className="text-black lg:text-9xl md:text-6xl text-4xl text-center">About us</h1>
     </div>
+    <div className="">
+      <p className="w-full lg:pt-10 lg:pb-2 lg:text-base text-[10px] pt-2 text-center text-gray-900">UEI: Bridging education and business realms, fostering collaboration for optimized processes and resource development."</p>
+    </div>
+    <Button size="xl" outline pill gradientDuoTone="pinkToOrange" className="text-xs z-10">Meet us at</Button>
   </div>
 </div>
 
+
+
+      {/* main content page */}
+      <div className="w-full mx-auto mt-10">
+        {/* heading */}
+        <div className="w-1/2 border-b border-black mx-auto">
+          <h1 className="uppercase lg:text-6xl md:text-4xl text-2xl text-center lg:p-4 p-2">who we are</h1>
+        </div>
+        <div className="w-11/12 mx-auto mt-5">
+          <p className="lg:text-3xl md:2xl text-center text-neutral-500 font-medium">
+            UniThink Education International is dedicated to the education and business for helping them set their processes, developing their human resources, manage the entire supply chain end to end. It's a network connecting top leaders of education and industry and establish the dialogue for capturing the opportunities which are amicable for both.
+          </p>
+        </div>
+      </div>
+      {/* VISIONS */}
+      <div className="w-full mx-auto mt-10">
+        {/* heading */}
+        <div className="w-1/2 border-b border-black mx-auto">
+          <h1 className="capitalize lg:text-6xl md:text-4xl text-2xl text-center lg:p-4 p-2">UEI envisions</h1>
+        </div>
+        <div className="w-11/12 mx-auto mt-7">
+          <ul className="w-full list-disc p-2">
+            <li className="lg:text-2xl text-neutral-500"><span className="font-bold">Global Leadership:</span> Being a global leader in empowering individuals for unparalleled career growth.</li>
+            <li className="lg:text-2xl text-neutral-500
+            "><span className="font-bold
+            ">Seamless Integration:</span> Seamlessly integrating tailored education choices with unique cultural identities and personal aspirations.</li>
+            <li className=" lg:text-2xl text-neutral-500
+            "><span className="font-bold
+            ">Executive Development Catalyst:</span> Catalyzing professionals at all levels for personal growth and organizational success.</li>
+            <li className=" lg:text-2xl text-neutral-500
+            "><span className="font-bold
+            ">Innovation and Transformation:</span> Leading continuous innovation and positive transformations in education and business.</li>
+            <li className=" lg:text-2xl text-neutral-500
+            "><span className="font-bold
+            ">Collaborative Excellence:</span> Creating a world where education and business collaborate seamlessly, contributing to global excellence</li>
+          </ul>
+        </div>
+      </div>
+      {/* FOUNDER */}
+      <div className="w-full mx-auto lg:mt-10 my-5">
+        {/* heading */}
+        <div className="w-1/2 border-b border-black mx-auto">
+          <h1 className="uppercase lg:text-6xl md:text-4xl text-2xl text-center lg:p-4 p-2">Meet the Founder</h1>
+        </div>
+        {/* main content */}
+        <div className="w-11/12 mx-auto mt-4 lg:flex ">
+          <div className="lg:w-1/2 w-full rounded-3xl p-4">
+            <img src={aboutusperson} alt="" className=" rounded-lg" />
+          </div>
+          {/*content about the founder*/}
+          <div className="lg:w-1/2 w-11/12 mx-auto lg:p-4 pb-6">
+            <h4 className="lg:text-4xl text-lg text-center mt-3">Dr. Sheelan Misra</h4>
+            <p className="text-left lg:text-lg lg:mt-5 mt-1 text-base">Higher education designing and marketing expert with business acumen, passionate for maximizing learning environment driven by innovation and collaboration</p>
+            <p className="lg:text-lg text-left mt-1 text-base">A Mentor, Coach, and Career Management Advisor, Dr. Sheelan Misra has a keen interest in developing people in the areas of Leadership, Personal Branding, Corporate Branding, and Entrepreneurship. She was leading the Department of Management Studies at New Horizon College of Engineering, Bangalore. She was also the Dean of the New Horizon Centre of Innovation, Incubation, and Entrepreneurship. Presently she is associated with Yangpoo Executive Education as the Vice President for Higher Education Partnerships and represents Harvard Business Publishing and Harvard Business School Online In India and five other countries, namely Singapore, UAE, Australia, Malaysia and Canada.</p>
+          </div>
+        </div>
+      </div>
+      {/* form*/}
+      <div className='p-5 bg-gradient-to-b from-orange-100 to-amber-100 border rounded-2xl shadow-lg lg:mx-96 md:mx-28 sm:mx-10 mb-10'>
+                        <p className='text-lg text-center md:text-left'>Book a session now! Dw! We won't charge you for anything...</p>
+                        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+                            <div>
+                                <Label value='Name*' />
+                                <TextInput
+                                    type='text'
+                                    placeholder='Enter your name'
+                                    id='name'
+                                    value={formData.name}
+                                    onChange={handleChange} />
+                            </div>
+                            <div>
+                                <Label value='Email*' />
+                                <TextInput
+                                    type='email'
+                                    placeholder='Enter your email'
+                                    id='email'
+                                    value={formData.email}
+                                    onChange={handleChange} rightIcon={HiMail} />
+                            </div>
+                            <div>
+                                <Label value='Phone*' />
+                                <TextInput
+                                    type='number'
+                                    placeholder='Enter your number'
+                                    id='phonenumber'
+                                    value={formData.phonenumber}
+                                    onChange={handleChange} />
+                            </div>
+                            <div>
+                                <Label htmlFor="degree" value="Select your degree*" />
+                                <Select id="degree" value={formData.degree} onChange={handleChange} required>
+                                    <option value="Masters">Masters</option>
+                                    <option value="Bachelors">Bachelors</option>
+                                    <option value="PhD">PhD</option>
+                                </Select>
+                            </div>
+                            <div>
+                                <Label value='Country*' />
+                                <TextInput
+                                    type='text'
+                                    placeholder='Enter your preferred country'
+                                    id='country'
+                                    value={formData.country}
+                                    onChange={handleChange} />
+                            </div>
+                            <Button gradientDuoTone='pinkToOrange' type='submit' disabled={loading}>{loading ? 'Booking...' : 'Book Now!'}</Button>
+                        </form>
+                    </div>
+    </div>
   )
 }
 
