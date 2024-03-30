@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import huge from '../assets/huge.png';
+import logo from '../assets/logo.jpg';
 import { Label, TextInput, Button, Alert,Select } from 'flowbite-react';
 import { HiMail } from 'react-icons/hi';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import heroimage from '../assets/hero_image_demo.png'
 
 
 function BookNow() {
@@ -53,73 +53,46 @@ function BookNow() {
     };
 
     return (
-        <div>
-            <div style={{ backgroundImage: `url(${huge})` }} className="h-screen bg-cover bg-center bg-no-repeat pt-40 pb-10 flex justify-center items-center mt-10 md:mt-0">
-                <div className="max-w-5xl mx-auto flex flex-col md:flex-row md:items-center gap-5">
-                    <div className="flex-1">
-                        <div className='font-bold text-3xl md:text-5xl tracking-wide text-center md:text-left'>
-                            A Stop for all your needs.
-                            <span className="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-red-500 relative inline-block">
-                                <span className="relative text-white">Enroll</span>
-                            </span>
-                            now and achieve what's yours!!
-                        </div>
-                        <p className='text-sm mt-5 text-center md:text-left'>Select Countries based on your preferences, not on your relatives' choices!</p>
-                        <Button outline size='lg' className='mt-5 mx-auto md:mx-0' gradientDuoTone='pinkToOrange'>Explore</Button>
-                    </div>
-                    <div className='flex-1 p-5 bg-gradient-to-b from-orange-100 to-amber-100 border rounded-2xl shadow-lg m-1'>
-                        <p className='text-lg text-center md:text-left'>Book a session now! Dw! We won't charge you for anything...</p>
-                        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-                            <div>
-                                <Label value='Name*' />
-                                <TextInput
-                                    type='text'
-                                    placeholder='Enter your name'
-                                    id='name'
-                                    value={formData.name}
-                                    onChange={handleChange} />
-                            </div>
-                            <div>
-                                <Label value='Email*' />
-                                <TextInput
-                                    type='email'
-                                    placeholder='Enter your email'
-                                    id='email'
-                                    value={formData.email}
-                                    onChange={handleChange} rightIcon={HiMail} />
-                            </div>
-                            <div>
-                                <Label value='Phone*' />
-                                <TextInput
-                                    type='number'
-                                    placeholder='Enter your number'
-                                    id='phonenumber'
-                                    value={formData.phonenumber}
-                                    onChange={handleChange} />
-                            </div>
-                            <div>
-                                <Label htmlFor="degree" value="Select your degree*" />
-                                <Select id="degree" value={formData.degree} onChange={handleChange} required>
-                                    <option value="Masters">Masters</option>
-                                    <option value="Bachelors">Bachelors</option>
-                                    <option value="PhD">PhD</option>
-                                </Select>
-                            </div>
-                            <div>
-                                <Label value='Country*' />
-                                <TextInput
-                                    type='text'
-                                    placeholder='Enter your preferred country'
-                                    id='country'
-                                    value={formData.country}
-                                    onChange={handleChange} />
-                            </div>
-                            <Button gradientDuoTone='pinkToOrange' type='submit' disabled={loading}>{loading ? 'Booking...' : 'Book Now!'}</Button>
-                        </form>
-                    </div>
+        <div className="bg-[#F0F4F6]">
+        <div className=" mx-auto max-w-[1600px] mt-20">
+          {/* wrapper */}
+          <div className="mx-auto lg:flex">
+            {/* left */}
+            <div className="lg:w-2/3 w-full flex flex-col justify-center lg:mx-0 md:mx-4 px-2">
+              <div className="mx-auto">
+                <div className="mt-5">
+                  <h6 className="font-popsemi lg:text-2xl md:text-xl text-xl font-extrabold">
+                    Study Abroad
+                  </h6>
                 </div>
+                <div className="mt-6">
+                  <h1 className=" font-poppinsBold capitalize lg:text-8xl md:text-2xl text-5xl font-extrabold">
+                    UniTh<span className="text-red-500">i</span>nk <br />
+                    Boundless learning
+                  </h1>
+                </div>
+                <div className="mt-5">
+                  <p className="text-[#737373] lg:text-xl">
+                    Discover answers to all your questions in a free consultation.
+                  </p>
+                </div>
+                <div className="mt-10">
+                  <button className="bg-black text-white py-3 px-6 hover:bg-red-500">
+                    Book Now!
+                  </button>
+                </div>
+              </div>
             </div>
+            {/* right */}
+            <div className="">
+              <img src={heroimage} alt="" />
+            </div>
+          </div>
+          {/*bottom part */}
+          <div className=""></div>
         </div>
+      </div>
+
     );
 }
 

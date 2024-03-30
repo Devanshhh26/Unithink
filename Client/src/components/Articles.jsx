@@ -23,28 +23,28 @@ function Articles() {
                         <Card className="max-w-sm relative hover:scale-105 shadow-xl " imgSrc={course3}>
                             <Button pill gradientDuoTone='pinkToOrange' outline className="absolute top-48 right-2 z-1 border border-red-500 p-0 m-0"><HiArrowCircleRight size={30}/></Button>
                             <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                                Noteworthy technology acquisitions 2021
+                                How do I choose the right destination for me ?
                             </h5>
                             <p className="font-normal text-gray-700 dark:text-gray-400">
-                                Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
+                            Understand the factors to consider when selecting a study destination that aligns with your academic, cultural, and personal preferences.
                             </p>
                         </Card>
                         <Card className="max-w-sm relative hover:scale-105 shadow-xl " imgSrc={course2}>
                         <Button pill gradientDuoTone='pinkToOrange' outline className="absolute top-48 right-2 z-1 border border-red-500 p-0 m-0"><HiArrowCircleRight size={30}/></Button>
                             <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                                Noteworthy technology acquisitions 2021
+                                What are the challenges of studying abroad, and how can I overcome them ?
                             </h5>
                             <p className="font-normal text-gray-700 dark:text-gray-400">
-                                Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
+                            Address concerns such as cultural adjustment, homesickness, language barriers, and academic differences, and discover strategies for overcoming these challenges.
                             </p>
                         </Card>
                         <Card className="max-w-sm relative hover:scale-105 shadow-xl " imgSrc={course1}>
                         <Button pill gradientDuoTone='pinkToOrange' outline className="absolute top-48 right-2 z-1 border border-red-500 p-0 m-0"><HiArrowCircleRight size={30}/></Button>
                             <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                                Noteworthy technology acquisitions 2021
+                                What support services are available for international students ?
                             </h5>
                             <p className="font-normal text-gray-700 dark:text-gray-400">
-                                Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
+                            Learn about resources such as international student advisors, language support, housing assistance, and student organizations offered by universities abroad.
                             </p>
                         </Card>
                     </div>
