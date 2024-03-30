@@ -19,7 +19,7 @@ function Countries() {
     fetchData();
   }, []);
   return (
-    <div className='pt-20 px-8'>
+    <div className='px-8'>
       <h1 className="text-3xl font-bold mt-10 mb-5 text-center pb-2">List Of Countries</h1>
       <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 justify-items-center">
         {countries && countries.map((country) =>(

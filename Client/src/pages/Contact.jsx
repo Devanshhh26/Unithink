@@ -55,7 +55,7 @@ function Contact() {
 
 
   return (
-    <div className='mt-10 md:mt-20 lg:mt-32 mx-auto justify-items-center'>
+    <div className='mx-auto justify-items-center'>
   <h1 className='text-center text-3xl md:text-5xl lg:text-5xl pb-5 md:pb-10 underline lg:pt-10 md:pt-12 pt-20'>Request Free Consultation</h1>
   <div className='p-3 md:p-5 lg:p-10 mx-3 sm:mx-auto lg:mx-auto max-w-md md:max-w-lg lg:max-w-3xl mb-10'>
     <p className='text-base md:text-lg text-center md:text-left'>Book a session now! Don't worry, we won't charge you for anything...</p>

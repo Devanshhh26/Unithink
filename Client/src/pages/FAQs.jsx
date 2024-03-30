@@ -22,7 +22,7 @@ function FAQs() {
   }, []);
 
   return (
-<div className='pt-20'>
+<div className=''>
   <div style={{ backgroundImage: `url(${homebgsm})` }} className="pr-0 md:pr-52 bg-cover bg-center bg-no-repeat flex justify-center items-center pb-16">
    <div className='flex flex-col md:flex-row md:ml-52 items-center text-center'>
     <h1 className='text-5xl'>
