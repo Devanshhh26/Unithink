@@ -5,7 +5,7 @@ import logo from '../assets/logo.jpg';
 
 function Header() {
   return (
-        <Navbar fluid rounded className='fixed top-0 w-full z-10 shadow-md'>
+        <Navbar fluid rounded className='top-0 w-full z-10 shadow-md'>
             <Navbar.Brand href="/">
             <img src={logo} className="mr-3 h-16 sm:h-14 md:h-16 lg:h-20" alt="Unithink" />
             

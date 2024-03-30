@@ -54,7 +54,7 @@ function BookNow() {
 
     return (
         <div className="bg-[#F0F4F6]">
-        <div className=" mx-auto max-w-[1600px] mt-20">
+        <div className=" mx-auto max-w-[1600px]">
           {/* wrapper */}
           <div className="mx-auto lg:flex">
             {/* left */}
