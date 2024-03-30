@@ -10,6 +10,7 @@ import Footer from './components/Footer'
 import Countries from './pages/Countries'
 import FAQs from './pages/FAQs'
 import Community from './pages/Community'
+import Booking from './pages/Booking'
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path='/countries' element={<Countries/>}/>
         <Route path='/faqs' element={<FAQs/>}/>
         <Route path='/community' element={<Community/>}/>
+        <Route path='/booking' element={<Booking/>}/>
       </Routes>
       <Footer/>
     </BrowserRouter>

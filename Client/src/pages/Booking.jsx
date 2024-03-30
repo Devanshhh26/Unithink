@@ -7,7 +7,7 @@ import axios from 'axios';
 import { HiMail } from 'react-icons/hi';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-function Contact() {
+function Booking() {
 
   
   const [errorMessage, setErrorMessage] = useState(null);
@@ -112,4 +112,4 @@ function Contact() {
   )
 }
 
-export default Contact
+export default Booking

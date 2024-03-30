@@ -6,6 +6,8 @@ import { HiMail } from 'react-icons/hi';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import heroimage from '../assets/hero_image_demo.png'
+import Booking from '../pages/Booking';
+import { Link } from 'react-router-dom';
 
 
 function BookNow() {
@@ -77,9 +79,11 @@ function BookNow() {
                   </p>
                 </div>
                 <div className="mt-10">
-                  <button className="bg-black text-white py-3 px-6 hover:bg-red-500">
+                <Link to='/booking' element={<Booking/>}>
+                  <Button className="bg-black text-white py-3 px-6 hover:bg-red-500">
                     Book Now!
-                  </button>
+                  </Button>
+                </Link>
                 </div>
               </div>
             </div>
